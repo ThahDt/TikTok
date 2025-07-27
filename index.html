@@ -89,10 +89,10 @@
       <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 text-center">Chọn chủ đề</h2>
       <div class="flex flex-wrap justify-center gap-3">
         <button onclick="filterVideos('all', event)" class="filter-btn active px-4 py-2 rounded-full border border-gray-300 transition-colors">Tất cả</button>
-        <button onclick="filterVideos('geometry', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">THPT 2006</button>
-        <button onclick="filterVideos('arithmetic', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">THPT 2018</button>
-        <button onclick="filterVideos('algebra', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">Phông bạt</button>
-        <button onclick="filterVideos('tips', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">Đề Thi</button>
+        <button onclick="filterVideos('thpt1', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">THPT 2006</button>
+        <button onclick="filterVideos('thpt2', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">THPT 2018</button>
+        <button onclick="filterVideos('phong', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">Phông bạt</button>
+        <button onclick="filterVideos('dethi', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">Đề Thi</button>
       </div>
     </div>
 
@@ -171,7 +171,7 @@
         id: 7,
         title: "Câu 1",
         description: "1",
-        category: "tips",
+        category: "dethi",
         tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7276700791837084929",
         thumbnail: "https://i.pinimg.com/1200x/e6/6e/79/e66e79092fed799b8b9e8520b8c91665.jpg"
       },
@@ -179,7 +179,7 @@
         id: 6,
         title: "Câu 1",
         description: "1",
-        category: "geometry",
+        category: "thpt1",
         tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7482009685785349383",
         thumbnail: "https://i.pinimg.com/736x/c7/fb/a1/c7fba19f66914817ef5aa8a785d88004.jpg"
       },
@@ -187,7 +187,7 @@
         id: 5,
         title: "Đề chính thức 2025",
         description: "Chương trình THPT 2018",
-        category: "algebra",
+        category: "phong",
         tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7520287860168101138",
         thumbnail: "https://i.pinimg.com/1200x/22/a9/e6/22a9e6077e0648ea51a419e9d75212d3.jpg"
       },
@@ -195,7 +195,7 @@
         id: 4,
         title: "Câu 1 - IMO 2025",
         description: "Phông bạt 02",
-        category: "arithmetic",
+        category: "thpt2",
         tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7527276239241956626",
         thumbnail: "https://i.pinimg.com/736x/fa/f2/f6/faf2f65d0c6d0e834a23c86826a65410.jpg"
       },
@@ -203,7 +203,7 @@
         id: 3,
         title: "[VIASM] - Thử thách mùa hè",
         description: "Phông bạt 01",
-        category: "arithmetic",
+        category: "thpt2",
         tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7531353201375841554",
         thumbnail: "https://i.pinimg.com/736x/94/ae/52/94ae52f6dcf0d5411d099f4dc53ab770.jpg"
       },
@@ -211,7 +211,7 @@
         id: 2,
         title: "Đáp án đề thi THPT 2025",
         description: "Lời giải chính xác, ngắn gọn của team",
-        category: "geometry",
+        category: "thpt1",
         tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7520479971509292295",
         thumbnail: "https://i.pinimg.com/736x/0e/c3/e4/0ec3e4be8567cab86dd4c3300f8dcad3.jpg"
       },
@@ -219,9 +219,921 @@
         id: 1,
         title: "Đáp án đề thi THPT 2024",
         description: "Lời giải chính xác, ngắn gọn của team",
-        category: "tips",
+        category: "dethi",
         tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7385499379999739144",
         thumbnail: "https://i.pinimg.com/736x/ef/a5/c0/efa5c013ad5dc426b76e1948a004e272.jpg"
+      },
+      {
+        id: 1,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@7104611150667547650/photo/7531353201375841554",
+        thumbnail: "https://i.pinimg.com/736x/c0/09/3e/c0093e53e6e6120c3458597b09d2677c.jpg"
+      },
+      {
+        id: 2,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@7104611150667547650/video/7433008434787765512",
+        thumbnail: "https://i.pinimg.com/736x/6e/ab/3e/6eab3e89b468c66af25e8d34a7683742.jpg"
+      },
+      {
+        id: 3,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@7104611150667547650/video/7445650107040599304",
+        thumbnail: "https://i.pinimg.com/736x/74/a1/13/74a113bdd8049b4adfc3528e0b390133.jpg"
+      },
+      {
+        id: 4,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@7104611150667547650/photo/7520479971509292295",
+        thumbnail: "https://i.pinimg.com/1200x/51/bd/2e/51bd2eaf89036ce7daa4f81405169df6.jpg"
+      },
+      {
+        id: 5,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@7104611150667547650/photo/7527517530303352071",
+        thumbnail: "https://i.pinimg.com/736x/26/39/09/26390930608a6e0bdcaf86daee93409a.jpg"
+      },
+      {
+        id: 6,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@7104611150667547650/photo/7320995822739426561",
+        thumbnail: "https://i.pinimg.com/736x/9e/db/75/9edb75c4b4b8c748c65f59c5f92e9247.jpg"
+      },
+      {
+        id: 7,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7385499379999739144",
+        thumbnail: "https://i.pinimg.com/736x/ce/b0/4b/ceb04bf1dac6bc5b7b182dc1295b3a17.jpg"
+      },
+      {
+        id: 8,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7379480266852568337",
+        thumbnail: "https://i.pinimg.com/736x/b3/be/f4/b3bef4e0d81d15730315ec1f20e7f27c.jpg"
+      },
+      {
+        id: 9,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7531353201375841554",
+        thumbnail: "https://i.pinimg.com/736x/c0/09/3e/c0093e53e6e6120c3458597b09d2677c.jpg"
+      },
+      {
+        id: 10,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7527517530303352071",
+        thumbnail: "https://i.pinimg.com/1200x/b3/40/13/b34013c160ad5d2f83d0012645bcd7bd.jpg"
+      },
+      {
+        id: 11,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7527276239241956626",
+        thumbnail: "https://i.pinimg.com/736x/11/b0/0d/11b00df654b802efcc5de0f17ce60339.jpg"
+      },
+      {
+        id: 12,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7527148222024879378",
+        thumbnail: "https://i.pinimg.com/736x/b7/ea/94/b7ea94302043b474bfb4aa6f57da018f.jpg"
+      },
+      {
+        id: 13,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7520479971509292295",
+        thumbnail: "https://i.pinimg.com/736x/aa/2b/d4/aa2bd45cadc0efb74366461bc3874f4c.jpg"
+      },
+      {
+        id: 14,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7520287860168101138",
+        thumbnail: "https://i.pinimg.com/736x/29/55/06/295506e1da953a3351018a5ba42605bf.jpg"
+      },
+      {
+        id: 15,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7488552899723726085",
+        thumbnail: "https://i.pinimg.com/736x/bb/3f/9a/bb3f9af8ce6e4b0b30e236e033e43393.jpg"
+      },
+      {
+        id: 16,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7487188005497736503",
+        thumbnail: "https://i.pinimg.com/1200x/5b/d0/40/5bd040296d08dc5626cb08c4063b81a1.jpg"
+      },
+      {
+        id: 17,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7486081112322706696",
+        thumbnail: "https://i.pinimg.com/736x/7c/a6/fe/7ca6fe10fdb394e7436ad3fac80e90d7.jpg"
+      },
+      {
+        id: 18,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7482383735216770322",
+        thumbnail: "https://i.pinimg.com/736x/dc/8b/2e/dc8b2e53c0bc31ad146a159c4b7d4f29.jpg"
+      },
+      {
+        id: 19,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7482009685785349383",
+        thumbnail: "https://i.pinimg.com/736x/8a/b6/3e/8ab63e62d31d56d7e2efc5f35d4380cc.jpg"
+      },
+      {
+        id: 20,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7480125363062869256",
+        thumbnail: "https://i.pinimg.com/736x/65/a1/c0/65a1c05061d5ca1bc554267fac366c26.jpg"
+      },
+      {
+        id: 21,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7479397103123336455",
+        thumbnail: "https://i.pinimg.com/736x/b6/5e/16/b65e16586691bed0bc57a16beb5b5940.jpg"
+      },
+      {
+        id: 22,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7477533512191577352",
+        thumbnail: "https://i.pinimg.com/736x/ef/7b/4c/ef7b4c12890711153e8750ac6c6a4ff6.jpg"
+      },
+      {
+        id: 23,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7476776210316397844",
+        thumbnail: "https://i.pinimg.com/1200x/96/c5/83/96c58357d407c2be84fe220962d7275e.jpg"
+      },
+      {
+        id: 24,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7476253725695266055",
+        thumbnail: "https://i.pinimg.com/1200x/ac/cd/c9/accdc9421b833ae1ad69a8e540a67140.jpg"
+      },
+      {
+        id: 25,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7476055148872224020",
+        thumbnail: "https://i.pinimg.com/736x/e5/a2/4f/e5a24fc73d5862a0dd985fdfb8243502.jpg"
+      },
+      {
+        id: 26,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7475601041644391697",
+        thumbnail: "https://i.pinimg.com/736x/c0/09/3e/c0093e53e6e6120c3458597b09d2677c.jpg"
+      },
+      {
+        id: 27,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7475263721124793607",
+        thumbnail: "https://i.pinimg.com/736x/6e/ab/3e/6eab3e89b468c66af25e8d34a7683742.jpg"
+      },
+      {
+        id: 28,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7474208878901710087",
+        thumbnail: "https://i.pinimg.com/736x/74/a1/13/74a113bdd8049b4adfc3528e0b390133.jpg"
+      },
+      {
+        id: 29,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7474092126758849799",
+        thumbnail: "https://i.pinimg.com/1200x/51/bd/2e/51bd2eaf89036ce7daa4f81405169df6.jpg"
+      },
+      {
+        id: 30,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7473724050351623442",
+        thumbnail: "https://i.pinimg.com/736x/26/39/09/26390930608a6e0bdcaf86daee93409a.jpg"
+      },
+      {
+        id: 31,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7469798488839064850",
+        thumbnail: "https://i.pinimg.com/736x/9e/db/75/9edb75c4b4b8c748c65f59c5f92e9247.jpg"
+      },
+      {
+        id: 32,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7467517042204118290",
+        thumbnail: "https://i.pinimg.com/736x/ce/b0/4b/ceb04bf1dac6bc5b7b182dc1295b3a17.jpg"
+      },
+      {
+        id: 33,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7467154875881704711",
+        thumbnail: "https://i.pinimg.com/736x/b3/be/f4/b3bef4e0d81d15730315ec1f20e7f27c.jpg"
+      },
+      {
+        id: 34,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7466787909127900423",
+        thumbnail: "https://i.pinimg.com/736x/c0/09/3e/c0093e53e6e6120c3458597b09d2677c.jpg"
+      },
+      {
+        id: 35,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7463831716071771400",
+        thumbnail: "https://i.pinimg.com/1200x/b3/40/13/b34013c160ad5d2f83d0012645bcd7bd.jpg"
+      },
+      {
+        id: 36,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7463446811525598482",
+        thumbnail: "https://i.pinimg.com/736x/11/b0/0d/11b00df654b802efcc5de0f17ce60339.jpg"
+      },
+      {
+        id: 37,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7462962286945144072",
+        thumbnail: "https://i.pinimg.com/736x/b7/ea/94/b7ea94302043b474bfb4aa6f57da018f.jpg"
+      },
+      {
+        id: 38,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7462676618910240008",
+        thumbnail: "https://i.pinimg.com/736x/aa/2b/d4/aa2bd45cadc0efb74366461bc3874f4c.jpg"
+      },
+      {
+        id: 39,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7462669013634649362",
+        thumbnail: "https://i.pinimg.com/736x/29/55/06/295506e1da953a3351018a5ba42605bf.jpg"
+      },
+      {
+        id: 40,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7460414931729517842",
+        thumbnail: "https://i.pinimg.com/736x/bb/3f/9a/bb3f9af8ce6e4b0b30e236e033e43393.jpg"
+      },
+      {
+        id: 41,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7458972364387241234",
+        thumbnail: "https://i.pinimg.com/1200x/5b/d0/40/5bd040296d08dc5626cb08c4063b81a1.jpg"
+      },
+      {
+        id: 42,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7458500754660166919",
+        thumbnail: "https://i.pinimg.com/736x/7c/a6/fe/7ca6fe10fdb394e7436ad3fac80e90d7.jpg"
+      },
+      {
+        id: 43,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7458242328868736274",
+        thumbnail: "https://i.pinimg.com/736x/dc/8b/2e/dc8b2e53c0bc31ad146a159c4b7d4f29.jpg"
+      },
+      {
+        id: 44,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7457513591030156562",
+        thumbnail: "https://i.pinimg.com/736x/8a/b6/3e/8ab63e62d31d56d7e2efc5f35d4380cc.jpg"
+      },
+      {
+        id: 45,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7457398262245477639",
+        thumbnail: "https://i.pinimg.com/736x/65/a1/c0/65a1c05061d5ca1bc554267fac366c26.jpg"
+      },
+      {
+        id: 46,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7456767757468683528",
+        thumbnail: "https://i.pinimg.com/736x/b6/5e/16/b65e16586691bed0bc57a16beb5b5940.jpg"
+      },
+      {
+        id: 47,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7456036439940254984",
+        thumbnail: "https://i.pinimg.com/736x/ef/7b/4c/ef7b4c12890711153e8750ac6c6a4ff6.jpg"
+      },
+      {
+        id: 48,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7454527997941533960",
+        thumbnail: "https://i.pinimg.com/1200x/96/c5/83/96c58357d407c2be84fe220962d7275e.jpg"
+      },
+      {
+        id: 49,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7454147652570205458",
+        thumbnail: "https://i.pinimg.com/1200x/ac/cd/c9/accdc9421b833ae1ad69a8e540a67140.jpg"
+      },
+      {
+        id: 50,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7452730561300286738",
+        thumbnail: "https://i.pinimg.com/736x/e5/a2/4f/e5a24fc73d5862a0dd985fdfb8243502.jpg"
+      },
+      {
+        id: 51,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7452570622003039496",
+        thumbnail: "https://i.pinimg.com/736x/c0/09/3e/c0093e53e6e6120c3458597b09d2677c.jpg"
+      },
+      {
+        id: 52,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7452231176502316295",
+        thumbnail: "https://i.pinimg.com/736x/6e/ab/3e/6eab3e89b468c66af25e8d34a7683742.jpg"
+      },
+      {
+        id: 53,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7452205927123438856",
+        thumbnail: "https://i.pinimg.com/736x/74/a1/13/74a113bdd8049b4adfc3528e0b390133.jpg"
+      },
+      {
+        id: 54,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7451217084593294599",
+        thumbnail: "https://i.pinimg.com/1200x/51/bd/2e/51bd2eaf89036ce7daa4f81405169df6.jpg"
+      },
+      {
+        id: 55,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7450000631449881874",
+        thumbnail: "https://i.pinimg.com/736x/26/39/09/26390930608a6e0bdcaf86daee93409a.jpg"
+      },
+      {
+        id: 56,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7448232528865021192",
+        thumbnail: "https://i.pinimg.com/736x/9e/db/75/9edb75c4b4b8c748c65f59c5f92e9247.jpg"
+      },
+      {
+        id: 57,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7447841829749394695",
+        thumbnail: "https://i.pinimg.com/736x/ce/b0/4b/ceb04bf1dac6bc5b7b182dc1295b3a17.jpg"
+      },
+      {
+        id: 58,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7447106984324648210",
+        thumbnail: "https://i.pinimg.com/736x/b3/be/f4/b3bef4e0d81d15730315ec1f20e7f27c.jpg"
+      },
+      {
+        id: 59,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7446742638578896136",
+        thumbnail: "https://i.pinimg.com/736x/c0/09/3e/c0093e53e6e6120c3458597b09d2677c.jpg"
+      },
+      {
+        id: 60,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7446383927159164178",
+        thumbnail: "https://i.pinimg.com/1200x/b3/40/13/b34013c160ad5d2f83d0012645bcd7bd.jpg"
+      },
+      {
+        id: 61,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7445956399290584338",
+        thumbnail: "https://i.pinimg.com/736x/11/b0/0d/11b00df654b802efcc5de0f17ce60339.jpg"
+      },
+      {
+        id: 62,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7445650107040599304",
+        thumbnail: "https://i.pinimg.com/736x/b7/ea/94/b7ea94302043b474bfb4aa6f57da018f.jpg"
+      },
+      {
+        id: 63,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7445248782855376136",
+        thumbnail: "https://i.pinimg.com/736x/aa/2b/d4/aa2bd45cadc0efb74366461bc3874f4c.jpg"
+      },
+      {
+        id: 64,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7444922078362455304",
+        thumbnail: "https://i.pinimg.com/736x/29/55/06/295506e1da953a3351018a5ba42605bf.jpg"
+      },
+      {
+        id: 65,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7444411515509230855",
+        thumbnail: "https://i.pinimg.com/736x/bb/3f/9a/bb3f9af8ce6e4b0b30e236e033e43393.jpg"
+      },
+      {
+        id: 66,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7440800041662450962",
+        thumbnail: "https://i.pinimg.com/1200x/5b/d0/40/5bd040296d08dc5626cb08c4063b81a1.jpg"
+      },
+      {
+        id: 67,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7439321682466098440",
+        thumbnail: "https://i.pinimg.com/736x/7c/a6/fe/7ca6fe10fdb394e7436ad3fac80e90d7.jpg"
+      },
+      {
+        id: 68,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7437731563028188424",
+        thumbnail: "https://i.pinimg.com/736x/dc/8b/2e/dc8b2e53c0bc31ad146a159c4b7d4f29.jpg"
+      },
+      {
+        id: 69,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7436623077259119890",
+        thumbnail: "https://i.pinimg.com/736x/8a/b6/3e/8ab63e62d31d56d7e2efc5f35d4380cc.jpg"
+      },
+      {
+        id: 70,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7435988487054101768",
+        thumbnail: "https://i.pinimg.com/736x/65/a1/c0/65a1c05061d5ca1bc554267fac366c26.jpg"
+      },
+      {
+        id: 71,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7435595272203341077",
+        thumbnail: "https://i.pinimg.com/736x/b6/5e/16/b65e16586691bed0bc57a16beb5b5940.jpg"
+      },
+      {
+        id: 72,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7435595073473072385",
+        thumbnail: "https://i.pinimg.com/736x/ef/7b/4c/ef7b4c12890711153e8750ac6c6a4ff6.jpg"
+      },
+      {
+        id: 73,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7433326068058148116",
+        thumbnail: "https://i.pinimg.com/1200x/96/c5/83/96c58357d407c2be84fe220962d7275e.jpg"
+      },
+      {
+        id: 74,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7433008434787765512",
+        thumbnail: "https://i.pinimg.com/1200x/ac/cd/c9/accdc9421b833ae1ad69a8e540a67140.jpg"
+      },
+      {
+        id: 75,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7432271238787058945",
+        thumbnail: "https://i.pinimg.com/736x/e5/a2/4f/e5a24fc73d5862a0dd985fdfb8243502.jpg"
+      },
+      {
+        id: 76,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7431193176196664596",
+        thumbnail: "https://i.pinimg.com/1200x/96/c5/83/96c58357d407c2be84fe220962d7275e.jpg"
+      },
+      {
+        id: 77,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7431152486313970965",
+        thumbnail: "https://i.pinimg.com/1200x/ac/cd/c9/accdc9421b833ae1ad69a8e540a67140.jpg"
+      },
+      {
+        id: 78,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7430795352413867271",
+        thumbnail: "https://i.pinimg.com/736x/e5/a2/4f/e5a24fc73d5862a0dd985fdfb8243502.jpg"
+      },
+      {
+        id: 79,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7430314466895547668",
+        thumbnail: "https://i.pinimg.com/736x/b7/ea/94/b7ea94302043b474bfb4aa6f57da018f.jpg"
+      },
+      {
+        id: 80,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7430038141882354964",
+        thumbnail: "https://i.pinimg.com/736x/aa/2b/d4/aa2bd45cadc0efb74366461bc3874f4c.jpg"
+      },
+      {
+        id: 81,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7430034050544438549",
+        thumbnail: "https://i.pinimg.com/736x/29/55/06/295506e1da953a3351018a5ba42605bf.jpg"
+      },
+      {
+        id: 82,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7429655732926254352",
+        thumbnail: "https://i.pinimg.com/736x/bb/3f/9a/bb3f9af8ce6e4b0b30e236e033e43393.jpg"
+      },
+      {
+        id: 83,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7428175529678867733",
+        thumbnail: "https://i.pinimg.com/1200x/5b/d0/40/5bd040296d08dc5626cb08c4063b81a1.jpg"
+      },
+      {
+        id: 84,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7427698222631488786",
+        thumbnail: "https://i.pinimg.com/736x/7c/a6/fe/7ca6fe10fdb394e7436ad3fac80e90d7.jpg"
+      },
+      {
+        id: 85,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7427018554022694151",
+        thumbnail: "https://i.pinimg.com/736x/dc/8b/2e/dc8b2e53c0bc31ad146a159c4b7d4f29.jpg"
+      },
+      {
+        id: 86,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7426391954159652116",
+        thumbnail: "https://i.pinimg.com/736x/8a/b6/3e/8ab63e62d31d56d7e2efc5f35d4380cc.jpg"
+      },
+      {
+        id: 87,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7425620554960407816",
+        thumbnail: "https://i.pinimg.com/736x/65/a1/c0/65a1c05061d5ca1bc554267fac366c26.jpg"
+      },
+      {
+        id: 88,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7425218388231802119",
+        thumbnail: "https://i.pinimg.com/736x/b6/5e/16/b65e16586691bed0bc57a16beb5b5940.jpg"
+      },
+      {
+        id: 89,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7425076076340055304",
+        thumbnail: "https://i.pinimg.com/736x/ef/7b/4c/ef7b4c12890711153e8750ac6c6a4ff6.jpg"
+      },
+      {
+        id: 90,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7424848063350508807",
+        thumbnail: "https://i.pinimg.com/1200x/96/c5/83/96c58357d407c2be84fe220962d7275e.jpg"
+      },
+      {
+        id: 91,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7424730512226274578",
+        thumbnail: "https://i.pinimg.com/1200x/ac/cd/c9/accdc9421b833ae1ad69a8e540a67140.jpg"
+      },
+      {
+        id: 92,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7424373580181392647",
+        thumbnail: "https://i.pinimg.com/736x/e5/a2/4f/e5a24fc73d5862a0dd985fdfb8243502.jpg"
+      },
+      {
+        id: 93,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7424128233026686216",
+        thumbnail: "https://i.pinimg.com/736x/c0/09/3e/c0093e53e6e6120c3458597b09d2677c.jpg"
+      },
+      {
+        id: 94,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7424117766472469768",
+        thumbnail: "https://i.pinimg.com/736x/6e/ab/3e/6eab3e89b468c66af25e8d34a7683742.jpg"
+      },
+      {
+        id: 95,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7424055794015948040",
+        thumbnail: "https://i.pinimg.com/736x/74/a1/13/74a113bdd8049b4adfc3528e0b390133.jpg"
+      },
+      {
+        id: 96,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7423008251140164882",
+        thumbnail: "https://i.pinimg.com/1200x/51/bd/2e/51bd2eaf89036ce7daa4f81405169df6.jpg"
+      },
+      {
+        id: 97,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7422871991297772807",
+        thumbnail: "https://i.pinimg.com/736x/26/39/09/26390930608a6e0bdcaf86daee93409a.jpg"
+      },
+      {
+        id: 98,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7422865845413547271",
+        thumbnail: "https://i.pinimg.com/736x/9e/db/75/9edb75c4b4b8c748c65f59c5f92e9247.jpg"
+      },
+      {
+        id: 99,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7422644134915165458",
+        thumbnail: "https://i.pinimg.com/736x/ce/b0/4b/ceb04bf1dac6bc5b7b182dc1295b3a17.jpg"
+      },
+      {
+        id: 100,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7422273851523960082",
+        thumbnail: "https://i.pinimg.com/736x/b3/be/f4/b3bef4e0d81d15730315ec1f20e7f27c.jpg"
+      },
+      {
+        id: 101,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7422151005590048018",
+        thumbnail: "https://i.pinimg.com/736x/c0/09/3e/c0093e53e6e6120c3458597b09d2677c.jpg"
+      },
+      {
+        id: 102,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7421529744396602632",
+        thumbnail: "https://i.pinimg.com/1200x/b3/40/13/b34013c160ad5d2f83d0012645bcd7bd.jpg"
+      },
+      {
+        id: 103,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7421380514663124232",
+        thumbnail: "https://i.pinimg.com/736x/11/b0/0d/11b00df654b802efcc5de0f17ce60339.jpg"
+      },
+      {
+        id: 104,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7413693017061690631",
+        thumbnail: "https://i.pinimg.com/736x/b7/ea/94/b7ea94302043b474bfb4aa6f57da018f.jpg"
+      },
+      {
+        id: 105,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7413375177804745992",
+        thumbnail: "https://i.pinimg.com/736x/aa/2b/d4/aa2bd45cadc0efb74366461bc3874f4c.jpg"
+      },
+      {
+        id: 106,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7412889145862835462",
+        thumbnail: "https://i.pinimg.com/736x/29/55/06/295506e1da953a3351018a5ba42605bf.jpg"
+      },
+      {
+        id: 107,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7412236970992225552",
+        thumbnail: "https://i.pinimg.com/736x/bb/3f/9a/bb3f9af8ce6e4b0b30e236e033e43393.jpg"
+      },
+      {
+        id: 108,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7409721458340990225",
+        thumbnail: "https://i.pinimg.com/1200x/5b/d0/40/5bd040296d08dc5626cb08c4063b81a1.jpg"
+      },
+      {
+        id: 109,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7408566927284555024",
+        thumbnail: "https://i.pinimg.com/736x/7c/a6/fe/7ca6fe10fdb394e7436ad3fac80e90d7.jpg"
+      },
+      {
+        id: 110,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7400407792860941585",
+        thumbnail: "https://i.pinimg.com/736x/dc/8b/2e/dc8b2e53c0bc31ad146a159c4b7d4f29.jpg"
+      },
+      {
+        id: 111,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7397413125798071569",
+        thumbnail: "https://i.pinimg.com/736x/8a/b6/3e/8ab63e62d31d56d7e2efc5f35d4380cc.jpg"
+      },
+      {
+        id: 112,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7396645932126768385",
+        thumbnail: "https://i.pinimg.com/736x/65/a1/c0/65a1c05061d5ca1bc554267fac366c26.jpg"
+      },
+      {
+        id: 113,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7392214577863200001",
+        thumbnail: "https://i.pinimg.com/736x/8a/b6/3e/8ab63e62d31d56d7e2efc5f35d4380cc.jpg"
+      },
+      {
+        id: 114,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "dethi",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/video/7389952008888929552",
+        thumbnail: "https://i.pinimg.com/736x/65/a1/c0/65a1c05061d5ca1bc554267fac366c26.jpg"
       }
     ];
 
@@ -296,10 +1208,10 @@
 
     function getCategoryName(category) {
       const names = {
-        geometry: 'THPT 2006',
-        arithmetic: 'THPT 2018',
-        algebra: 'Phông bạt',
-        tips: 'Đề Thi'
+        thpt1: 'THPT 2006',
+        thpt2: 'THPT 2018',
+        phong: 'Phông bạt',
+        dethi: 'Đề Thi'
       };
       return names[category] || category;
     }
