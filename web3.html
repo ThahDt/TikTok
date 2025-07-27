@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toán Học Dễ Hiểu - TikTok Math Content</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    .filter-btn.active {
+      background: #667eea;
+      color: white;
+    }
+    .tiktok-embed {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .dark body {
+      background-color: #1a202c;
+      color: #e2e8f0;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 dark:text-white">
+  <!-- Header -->
+  <header class="gradient-bg text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <div class="mb-6">
+        <i class="fas fa-calculator text-6xl mb-4 opacity-90"></i>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Học Toán Cùng Thah Dt</h1>
+      <p class="text-xl md:text-2xl mb-6 opacity-90">Dễ dàng học toán trên TikTok với Thah Dt</p>
+      <p class="text-lg opacity-80 max-w-2xl mx-auto">
+        Khám phá các video ngắn về Toán học với mẹo giải nhanh, kiến thức nền tảng và ứng dụng thực tế. Giúp học sinh - sinh viên yêu thích Toán học hơn!
+      </p>
+      <div class="mt-8">
+        <a href="https://www.facebook.com/thahdt/" target="_blank" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-white font-medium transition-colors">
+          <i class="fab fa-facebook-f mr-2"></i> Theo dõi Facebook
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50 relative">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center space-x-8 py-4">
+        <button onclick="showTab('videos', event)" class="nav-btn px-6 py-2 rounded-full font-medium transition-colors bg-blue-100 text-blue-600">
+          <i class="fas fa-play-circle mr-2"></i>Video
+        </button>
+        <button onclick="showTab('contact', event)" class="nav-btn px-6 py-2 rounded-full font-medium transition-colors text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700">
+          <i class="fas fa-comments mr-2"></i>Trao đổi
+        </button>
+      </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="absolute right-4 top-4">
+      <button onclick="toggleDarkMode()" class="text-gray-600 hover:text-black dark:text-white transition-colors">
+        <i class="fas fa-moon text-xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Videos Tab -->
+  <div id="videos-tab" class="container mx-auto px-4 py-8">
+    <!-- Search Box -->
+    <div class="mb-6 text-center">
+      <input type="text" id="searchInput" oninput="renderVideos()" placeholder="Tìm kiếm video theo tiêu đề..." class="w-full max-w-md mx-auto px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-800 dark:border-gray-600" />
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 text-center">Chọn chủ đề</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <button onclick="filterVideos('all', event)" class="filter-btn active px-4 py-2 rounded-full border border-gray-300 transition-colors">Tất cả</button>
+        <button onclick="filterVideos('geometry', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">THPT 2006</button>
+        <button onclick="filterVideos('arithmetic', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">THPT 2018</button>
+        <button onclick="filterVideos('algebra', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">Phông bạt</button>
+        <button onclick="filterVideos('tips', event)" class="filter-btn px-4 py-2 rounded-full border border-gray-300 transition-colors">Đề Thi</button>
+      </div>
+    </div>
+
+    <!-- Videos Grid -->
+    <div id="videos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+
+  <!-- Contact Tab -->
+  <div id="contact-tab" class="container mx-auto px-4 py-8 hidden">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Trao đổi & Góp ý</h2>
+        <p class="text-gray-600 dark:text-gray-300">Có câu hỏi về Toán học? Muốn đề xuất chủ đề mới? Hãy liên hệ với tôi!</p>
+      </div>
+
+      <form id="contact-form" class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+        <div class="mb-6">
+          <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Họ tên</label>
+          <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Email</label>
+          <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Loại tin nhắn</label>
+          <select id="message-type" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <option value="question">Câu hỏi Toán học</option>
+            <option value="suggestion">Đề xuất chủ đề</option>
+            <option value="feedback">Góp ý</option>
+            <option value="other">Khác</option>
+          </select>
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-gray-700 dark:text-gray-300 font-medium mb-2">Nội dung</label>
+          <textarea id="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Chia sẻ câu hỏi hoặc ý tưởng của bạn..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full gradient-bg text-white py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
+          <i class="fas fa-paper-plane mr-2"></i> Gửi tin nhắn
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-16">
+    <div class="container mx-auto px-4 text-center">
+      <div class="mb-4">
+        <i class="fas fa-calculator text-3xl mb-2"></i>
+        <h3 class="text-xl font-bold">Học Toán Cùng Thah Dt</h3>
+      </div>
+      <p class="text-gray-400 mb-4">Làm cho Toán học trở nên thú vị và dễ hiểu hơn</p>
+      <div class="flex justify-center space-x-6">
+        <a href="https://tiktok.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+          <i class="fab fa-tiktok text-2xl"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+          <i class="fab fa-facebook text-2xl"></i>
+        </a>
+        <a href="mailto:contact@example.com" class="text-gray-400 hover:text-white transition-colors">
+          <i class="fas fa-envelope text-2xl"></i>
+        </a>
+      </div>
+      <p class="text-gray-500 text-sm mt-4">© 2024 Học Toán Cùng Thah Dt. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const videosData = [
+      {
+        id: 7,
+        title: "Câu 1",
+        description: "1",
+        category: "tips",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7276700791837084929",
+        thumbnail: "https://i.pinimg.com/1200x/e6/6e/79/e66e79092fed799b8b9e8520b8c91665.jpg"
+      },
+      {
+        id: 6,
+        title: "Câu 1",
+        description: "1",
+        category: "geometry",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7482009685785349383",
+        thumbnail: "https://i.pinimg.com/736x/c7/fb/a1/c7fba19f66914817ef5aa8a785d88004.jpg"
+      },
+      {
+        id: 5,
+        title: "Đề chính thức 2025",
+        description: "Chương trình THPT 2018",
+        category: "algebra",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7520287860168101138",
+        thumbnail: "https://i.pinimg.com/1200x/22/a9/e6/22a9e6077e0648ea51a419e9d75212d3.jpg"
+      },
+      {
+        id: 4,
+        title: "Câu 1 - IMO 2025",
+        description: "Phông bạt 02",
+        category: "arithmetic",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7527276239241956626",
+        thumbnail: "https://i.pinimg.com/736x/fa/f2/f6/faf2f65d0c6d0e834a23c86826a65410.jpg"
+      },
+      {
+        id: 3,
+        title: "[VIASM] - Thử thách mùa hè",
+        description: "Phông bạt 01",
+        category: "arithmetic",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7531353201375841554",
+        thumbnail: "https://i.pinimg.com/736x/94/ae/52/94ae52f6dcf0d5411d099f4dc53ab770.jpg"
+      },
+      {
+        id: 2,
+        title: "Đáp án đề thi THPT 2025",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "geometry",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7520479971509292295",
+        thumbnail: "https://i.pinimg.com/736x/0e/c3/e4/0ec3e4be8567cab86dd4c3300f8dcad3.jpg"
+      },
+      {
+        id: 1,
+        title: "Đáp án đề thi THPT 2024",
+        description: "Lời giải chính xác, ngắn gọn của team",
+        category: "tips",
+        tiktokUrl: "https://www.tiktok.com/@thahdt/photo/7385499379999739144",
+        thumbnail: "https://i.pinimg.com/736x/ef/a5/c0/efa5c013ad5dc426b76e1948a004e272.jpg"
+      }
+    ];
+
+    let currentFilter = 'all';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderVideos();
+      setupContactForm();
+      if (localStorage.getItem('darkMode') === 'on') {
+        document.documentElement.classList.add('dark');
+      }
+    });
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('darkMode', document.documentElement.classList.contains('dark') ? 'on' : 'off');
+    }
+
+    function showTab(tabName, event) {
+      document.getElementById('videos-tab').classList.add('hidden');
+      document.getElementById('contact-tab').classList.add('hidden');
+      document.getElementById(tabName + '-tab').classList.remove('hidden');
+
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('bg-blue-100', 'text-blue-600');
+        btn.classList.add('text-gray-600', 'hover:bg-gray-100');
+      });
+
+      event.target.classList.remove('text-gray-600', 'hover:bg-gray-100');
+      event.target.classList.add('bg-blue-100', 'text-blue-600');
+    }
+
+    function filterVideos(category, event) {
+      currentFilter = category;
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderVideos();
+    }
+
+    function renderVideos() {
+      const grid = document.getElementById('videos-grid');
+      const searchText = document.getElementById('searchInput')?.value?.toLowerCase() || '';
+
+      let filteredVideos = currentFilter === 'all' ? videosData : videosData.filter(v => v.category === currentFilter);
+      filteredVideos = filteredVideos.filter(v => v.title.toLowerCase().includes(searchText));
+      filteredVideos.sort((a, b) => b.id - a.id);
+
+      grid.innerHTML = filteredVideos.map(video => `
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover relative group">
+          <div class="relative">
+            <img src="${video.thumbnail}" alt="${video.title}" class="w-full h-48 object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <i class="fab fa-tiktok text-white text-4xl"></i>
+            </div>
+            <div class="absolute top-2 right-2 bg-white bg-opacity-80 rounded-full p-1">
+              <i class="fab fa-tiktok text-pink-600"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-800 dark:text-white mb-2">${video.title}</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">${video.description}</p>
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">${getCategoryName(video.category)}</span>
+              <a href="${video.tiktokUrl}" target="_blank" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
+                <i class="fab fa-tiktok mr-1"></i> Xem TikTok
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function getCategoryName(category) {
+      const names = {
+        geometry: 'THPT 2006',
+        arithmetic: 'THPT 2018',
+        algebra: 'Phông bạt',
+        tips: 'Đề Thi'
+      };
+      return names[category] || category;
+    }
+
+    function setupContactForm() {
+      document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const messageType = document.getElementById('message-type').value;
+        const message = document.getElementById('message').value;
+
+        console.log({ name, email, messageType, message });
+
+        alert('Cảm ơn bạn đã gửi tin nhắn! Chúng tôi sẽ phản hồi sớm.');
+        this.reset();
+      });
+    }
+  </script>
+</body>
+</html>
