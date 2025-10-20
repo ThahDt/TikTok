@@ -1,285 +1,243 @@
 <!doctype html>
 <html lang="vi">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chúc Mừng 20/10</title>
+
+  <!-- (Tuỳ nền tảng) SDK chỉnh sửa trực tiếp, không bắt buộc -->
   <script src="/_sdk/element_sdk.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-        body {
-            box-sizing: border-box;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes sparkle {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.2); }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .sparkle {
-            animation: sparkle 2s ease-in-out infinite;
-        }
-        
-        .fade-in-up {
-            animation: fadeInUp 1s ease-out;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #ff6b9d, #ffc3e0, #ff9a9e, #fecfef);
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .flower-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0-11.046 8.954-20 20-20s20 8.954 20 20-8.954 20-20 20-20-8.954-20-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-    </style>
-  <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
- </head>
- <body class="min-h-full gradient-bg flower-pattern">
-  <main class="min-h-full flex items-center justify-center p-4">
-   <div class="max-w-4xl w-full text-center"><!-- Decorative flowers -->
-    <div class="absolute top-10 left-10 text-6xl sparkle">
-     🌸
-    </div>
-    <div class="absolute top-20 right-16 text-4xl sparkle" style="animation-delay: 0.5s;">
-     🌺
-    </div>
-    <div class="absolute bottom-20 left-20 text-5xl sparkle" style="animation-delay: 1s;">
-     🌷
-    </div>
-    <div class="absolute bottom-16 right-12 text-4xl sparkle" style="animation-delay: 1.5s;">
-     🌹
-    </div><!-- Main content -->
-    <div class="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 fade-in-up"><!-- Date badge -->
-     <div class="inline-block bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-2 rounded-full text-lg font-bold mb-6 float-animation">
-      20/10
-     </div><!-- Main title -->
-     <h1 id="main-title" class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-rose-600 mb-4">Chúc mừng ngày Phụ nữ Việt Nam 20/10</h1><!-- Subtitle -->
-     <p id="subtitle" class="text-xl md:text-2xl text-gray-700 mb-8">Gửi tặng những người phụ nữ tuyệt vời</p><!-- Decorative hearts -->
-     <div class="flex justify-center gap-4 mb-8"><span class="text-3xl sparkle">💖</span> <span class="text-3xl sparkle" style="animation-delay: 0.3s;">💕</span> <span class="text-3xl sparkle" style="animation-delay: 0.6s;">💖</span>
-     </div><!-- Video button -->
-     <div class="mb-8"><button id="video-button" class="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300 float-animation"> 🎥 Xem video chúc mừng </button>
-     </div><!-- Greeting message -->
-     <div class="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-6 mb-6">
-      <p id="greeting-message" class="text-lg md:text-xl text-gray-800 italic">"Chúc các chị em luôn xinh đẹp, hạnh phúc và thành công!"</p>
-     </div><!-- Decorative elements -->
-     <div class="flex justify-center gap-2 text-2xl"><span class="sparkle">✨</span> <span class="sparkle" style="animation-delay: 0.2s;">🌟</span> <span class="sparkle" style="animation-delay: 0.4s;">✨</span> <span class="sparkle" style="animation-delay: 0.6s;">🌟</span> <span class="sparkle" style="animation-delay: 0.8s;">✨</span>
-     </div>
-    </div>
-   </div>
-  </main><!-- Video modal -->
-  <div id="video-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
-   <div class="bg-white rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-auto">
-    <div class="flex justify-between items-center mb-4">
-     <h3 class="text-2xl font-bold text-gray-800">Video chúc mừng 20/10</h3><button id="close-modal" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">×</button>
-    </div>
-    <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-     <video id="video-player" class="w-full h-full rounded-lg hidden" controls><source id="video-source" src="" type="video/mp4"> Trình duyệt của bạn không hỗ trợ video.
-     </video>
-     <div id="video-placeholder" class="text-center p-8">
-      <div class="text-6xl mb-4">
-       🎬
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --primary:#ec4899; --secondary:#f43f5e; --bg:#fdf2f8; --accent:#be185d; --text:#374151;
+    }
+    *{box-sizing:border-box}
+    @media (prefers-reduced-motion: reduce){ .float-animation,.sparkle,.fade-in-up{animation:none!important} }
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+    @keyframes sparkle{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.2)}}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    .float-animation{animation:float 3s ease-in-out infinite}
+    .sparkle{animation:sparkle 2s ease-in-out infinite}
+    .fade-in-up{animation:fadeInUp 1s ease-out both}
+    .gradient-bg{
+      background:linear-gradient(135deg,var(--primary),#ffc3e0,var(--secondary),#fecfef);
+      background-size:400% 400%; animation:gradientShift 8s ease infinite;
+    }
+    @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .flower-pattern{
+      background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0-11.046 8.954-20 20-20s20 8.954 20 20-8.954 20-20 20-20-8.954-20-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .title-gradient{
+      background-image:linear-gradient(to right,var(--primary),var(--secondary));
+      -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+    }
+    .btn-gradient{background-image:linear-gradient(to right,var(--primary),var(--secondary))}
+    @view-transition{navigation:auto}
+  </style>
+</head>
+<body class="min-h-screen gradient-bg flower-pattern">
+  <main class="min-h-screen flex items-center justify-center p-4 relative">
+    <div class="max-w-4xl w-full text-center relative">
+      <!-- Decorative flowers -->
+      <div class="absolute top-10 left-10 text-6xl sparkle select-none" aria-hidden="true">🌸</div>
+      <div class="absolute top-20 right-16 text-4xl sparkle select-none" style="animation-delay:.5s" aria-hidden="true">🌺</div>
+      <div class="absolute bottom-20 left-20 text-5xl sparkle select-none" style="animation-delay:1s" aria-hidden="true">🌷</div>
+      <div class="absolute bottom-16 right-12 text-4xl sparkle select-none" style="animation-delay:1.5s" aria-hidden="true">🌹</div>
+
+      <!-- Card -->
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 fade-in-up">
+        <div class="inline-block btn-gradient text-white px-6 py-2 rounded-full text-lg font-bold mb-6 float-animation">20/10</div>
+        <h1 id="main-title" class="title-gradient text-4xl md:text-6xl font-bold mb-4">Chúc mừng ngày Phụ nữ Việt Nam 20/10</h1>
+        <p id="subtitle" class="text-xl md:text-2xl text-gray-700 mb-8">Gửi tặng những người phụ nữ tuyệt vời</p>
+
+        <div class="flex justify-center gap-4 mb-8" aria-hidden="true">
+          <span class="text-3xl sparkle">💖</span>
+          <span class="text-3xl sparkle" style="animation-delay:.3s">💕</span>
+          <span class="text-3xl sparkle" style="animation-delay:.6s">💖</span>
+        </div>
+
+        <div class="mb-8">
+          <button id="video-button"
+                  class="btn-gradient hover:brightness-110 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-all duration-300 float-animation focus:outline-none focus:ring-4 focus:ring-rose-300">
+            🎥 Xem video chúc mừng
+          </button>
+        </div>
+
+        <div class="bg-gradient-to-r from-pink-50 to-rose-50 rounded-2xl p-6 mb-6">
+          <p id="greeting-message" class="text-lg md:text-xl italic" style="color:var(--text)">
+            "Chúc các chị em luôn xinh đẹp, hạnh phúc và thành công!"
+          </p>
+        </div>
+
+        <div class="flex justify-center gap-2 text-2xl" aria-hidden="true">
+          <span class="sparkle">✨</span><span class="sparkle" style="animation-delay:.2s">🌟</span>
+          <span class="sparkle" style="animation-delay:.4s">✨</span><span class="sparkle" style="animation-delay:.6s">🌟</span>
+          <span class="sparkle" style="animation-delay:.8s">✨</span>
+        </div>
       </div>
-      <p class="text-gray-600 mb-4">Vui lòng cập nhật đường dẫn video trong phần chỉnh sửa</p>
-      <p class="text-sm text-gray-500">Hỗ trợ các định dạng: MP4, WebM, OGV</p>
-     </div>
     </div>
-   </div>
+  </main>
+
+  <!-- Video modal -->
+  <div id="video-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4"
+       role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+    <div class="bg-white rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-auto outline-none">
+      <div class="flex justify-between items-center mb-4">
+        <h3 id="video-modal-title" class="text-2xl font-bold text-gray-800">Video chúc mừng 20/10</h3>
+        <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-3xl font-bold leading-none px-2 rounded focus:outline-none focus:ring-2 focus:ring-rose-300" aria-label="Đóng">×</button>
+      </div>
+
+      <div class="aspect-video bg-gray-100 rounded-lg flex items-center justify-center relative">
+        <video id="video-player" class="w-full h-full rounded-lg hidden" controls playsinline preload="metadata">
+          <source id="video-source" src="" type="video/mp4" />
+          Trình duyệt của bạn không hỗ trợ video.
+        </video>
+
+        <div id="video-placeholder" class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+          <div class="text-6xl mb-4">🎬</div>
+          <p class="text-gray-600 mb-2">Vui lòng cập nhật đường dẫn video trong phần cấu hình</p>
+          <p class="text-sm text-gray-500">Hỗ trợ: MP4/WebM/OGV</p>
+        </div>
+      </div>
+    </div>
   </div>
+
   <script>
-        // Default configuration
-        const defaultConfig = {
-            main_title: "Chúc mừng ngày Phụ nữ Việt Nam 20/10",
-            subtitle: "Gửi tặng những người phụ nữ tuyệt vời",
-            video_button_text: "Xem video chúc mừng",
-            video_url: "",
-            greeting_message: "Chúc các chị em luôn xinh đẹp, hạnh phúc và thành công!",
-            primary_color: "#ec4899",
-            secondary_color: "#f43f5e",
-            background_color: "#fdf2f8",
-            accent_color: "#be185d",
-            text_color: "#374151"
-        };
+    // ===== Cấu hình mặc định (đã trỏ tới file 2010.mp4 cùng thư mục) =====
+    const defaultConfig = {
+      main_title: "Chúc mừng ngày Phụ nữ Việt Nam 20/10",
+      subtitle: "Gửi tặng những bông hồng mạnh mẽ đại gia đình siu nhân",
+      video_button_text: "Video mã mã",
+      video_url: "2010.mp4", // ← file video đặt cùng thư mục với file HTML
+      greeting_message: "Chúc những cô gái bé nhỏ một đời an yên, một kiếp rạng rỡ. Mong cậu luôn là mặt trời ấm áp của chính mình, và là vì sao lấp lánh trong đêm của một ai đó.",
+      primary_color: "#ec4899",
+      secondary_color: "#f43f5e",
+      background_color: "#fdf2f8",
+      accent_color: "#be185d",
+      text_color: "#374151"
+    };
 
-        // Render function
-        async function render(config) {
-            const mainTitle = document.getElementById('main-title');
-            const subtitle = document.getElementById('subtitle');
-            const videoButton = document.getElementById('video-button');
-            const greetingMessage = document.getElementById('greeting-message');
-            const videoSource = document.getElementById('video-source');
-            const videoPlayer = document.getElementById('video-player');
-            const videoPlaceholder = document.getElementById('video-placeholder');
+    // ===== Render giao diện theo config =====
+    async function render(config) {
+      const mainTitle        = document.getElementById('main-title');
+      const subtitle         = document.getElementById('subtitle');
+      const videoButton      = document.getElementById('video-button');
+      const greetingMessage  = document.getElementById('greeting-message');
+      const videoSource      = document.getElementById('video-source');
+      const videoPlayer      = document.getElementById('video-player');
+      const videoPlaceholder = document.getElementById('video-placeholder');
 
-            // Update text content
-            mainTitle.textContent = config.main_title || defaultConfig.main_title;
-            subtitle.textContent = config.subtitle || defaultConfig.subtitle;
-            videoButton.innerHTML = `🎥 ${config.video_button_text || defaultConfig.video_button_text}`;
-            greetingMessage.textContent = `"${config.greeting_message || defaultConfig.greeting_message}"`;
+      // Text
+      mainTitle.textContent        = config.main_title || defaultConfig.main_title;
+      subtitle.textContent         = config.subtitle || defaultConfig.subtitle;
+      videoButton.textContent      = `🎥 ${config.video_button_text || defaultConfig.video_button_text}`;
+      greetingMessage.textContent  = `"${config.greeting_message || defaultConfig.greeting_message}"`;
 
-            // Update video source
-            const videoUrl = config.video_url || defaultConfig.video_url;
-            if (videoUrl && videoUrl.trim()) {
-                videoSource.src = videoUrl;
-                videoPlayer.classList.remove('hidden');
-                videoPlaceholder.classList.add('hidden');
-                videoPlayer.load();
-            } else {
-                videoPlayer.classList.add('hidden');
-                videoPlaceholder.classList.remove('hidden');
-            }
+      // Màu sắc (CSS variables)
+      const r = document.documentElement.style;
+      r.setProperty('--primary',   config.primary_color    || defaultConfig.primary_color);
+      r.setProperty('--secondary', config.secondary_color  || defaultConfig.secondary_color);
+      r.setProperty('--bg',        config.background_color || defaultConfig.background_color);
+      r.setProperty('--accent',    config.accent_color     || defaultConfig.accent_color);
+      r.setProperty('--text',      config.text_color       || defaultConfig.text_color);
 
-            // Update colors
-            const primaryColor = config.primary_color || defaultConfig.primary_color;
-            const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
-            const backgroundColor = config.background_color || defaultConfig.background_color;
-            const accentColor = config.accent_color || defaultConfig.accent_color;
-            const textColor = config.text_color || defaultConfig.text_color;
+      // Video
+      const videoUrl = (config.video_url || defaultConfig.video_url || "").trim();
+      if (videoUrl) {
+        // đoán MIME theo đuôi
+        const ext  = videoUrl.split('.').pop().toLowerCase();
+        const mime = ext === 'webm' ? 'video/webm' : (ext === 'ogv'||ext==='ogg') ? 'video/ogg' : 'video/mp4';
+        videoSource.type = mime;
+        videoSource.src  = videoUrl;
 
-            // Apply colors to elements
-            document.body.style.background = `linear-gradient(135deg, ${primaryColor}, ${backgroundColor}, ${secondaryColor}, #fecfef)`;
-            mainTitle.style.background = `linear-gradient(to right, ${primaryColor}, ${secondaryColor})`;
-            mainTitle.style.webkitBackgroundClip = 'text';
-            mainTitle.style.backgroundClip = 'text';
-            videoButton.style.background = `linear-gradient(to right, ${primaryColor}, ${secondaryColor})`;
-            greetingMessage.style.color = textColor;
-        }
+        videoPlayer.classList.remove('hidden');
+        videoPlaceholder.classList.add('hidden');
+        videoPlayer.load();
+      } else {
+        videoPlayer.classList.add('hidden');
+        videoPlaceholder.classList.remove('hidden');
+      }
+    }
 
-        // Capabilities mapping
-        function mapToCapabilities(config) {
-            return {
-                recolorables: [
-                    {
-                        get: () => config.primary_color || defaultConfig.primary_color,
-                        set: (value) => {
-                            config.primary_color = value;
-                            if (window.elementSdk) {
-                                window.elementSdk.setConfig({ primary_color: value });
-                            }
-                        }
-                    },
-                    {
-                        get: () => config.secondary_color || defaultConfig.secondary_color,
-                        set: (value) => {
-                            config.secondary_color = value;
-                            if (window.elementSdk) {
-                                window.elementSdk.setConfig({ secondary_color: value });
-                            }
-                        }
-                    },
-                    {
-                        get: () => config.background_color || defaultConfig.background_color,
-                        set: (value) => {
-                            config.background_color = value;
-                            if (window.elementSdk) {
-                                window.elementSdk.setConfig({ background_color: value });
-                            }
-                        }
-                    },
-                    {
-                        get: () => config.accent_color || defaultConfig.accent_color,
-                        set: (value) => {
-                            config.accent_color = value;
-                            if (window.elementSdk) {
-                                window.elementSdk.setConfig({ accent_color: value });
-                            }
-                        }
-                    },
-                    {
-                        get: () => config.text_color || defaultConfig.text_color,
-                        set: (value) => {
-                            config.text_color = value;
-                            if (window.elementSdk) {
-                                window.elementSdk.setConfig({ text_color: value });
-                            }
-                        }
-                    }
-                ],
-                borderables: [],
-                fontEditable: undefined,
-                fontSizeable: undefined
-            };
-        }
+    // ===== Modal video =====
+    function setupVideoModal() {
+      const videoButton = document.getElementById('video-button');
+      const videoModal  = document.getElementById('video-modal');
+      const closeModal  = document.getElementById('close-modal');
+      const videoPlayer = document.getElementById('video-player');
 
-        // Edit panel values mapping
-        function mapToEditPanelValues(config) {
-            return new Map([
-                ["main_title", config.main_title || defaultConfig.main_title],
-                ["subtitle", config.subtitle || defaultConfig.subtitle],
-                ["video_button_text", config.video_button_text || defaultConfig.video_button_text],
-                ["video_url", config.video_url || defaultConfig.video_url],
-                ["greeting_message", config.greeting_message || defaultConfig.greeting_message]
-            ]);
-        }
+      let lastFocused = null;
 
-        // Video modal functionality
-        function setupVideoModal() {
-            const videoButton = document.getElementById('video-button');
-            const videoModal = document.getElementById('video-modal');
-            const closeModal = document.getElementById('close-modal');
-            const videoPlayer = document.getElementById('video-player');
+      const open = () => {
+        lastFocused = document.activeElement;
+        videoModal.classList.remove('hidden');
+        videoModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        closeModal.focus();
+      };
+      const close = () => {
+        videoModal.classList.add('hidden');
+        videoModal.classList.remove('flex');
+        document.body.style.overflow = '';
+        videoPlayer.pause?.();
+        lastFocused?.focus?.();
+      };
 
-            videoButton.addEventListener('click', () => {
-                videoModal.classList.remove('hidden');
-                videoModal.classList.add('flex');
-            });
+      // Thoát bằng ESC + trap focus cơ bản
+      const focusableSel = 'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])';
+      videoModal.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape'){ e.preventDefault(); close(); return; }
+        if (e.key !== 'Tab') return;
+        const nodes = videoModal.querySelectorAll(focusableSel);
+        if (!nodes.length) return;
+        const list = Array.from(nodes);
+        const first = list[0], last = list[list.length - 1];
+        if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+      });
 
-            closeModal.addEventListener('click', () => {
-                videoModal.classList.add('hidden');
-                videoModal.classList.remove('flex');
-                videoPlayer.pause();
-            });
+      videoButton.addEventListener('click', open);
+      closeModal.addEventListener('click', close);
+      videoModal.addEventListener('click', (e) => { if (e.target === videoModal) close(); });
+    }
 
-            videoModal.addEventListener('click', (e) => {
-                if (e.target === videoModal) {
-                    videoModal.classList.add('hidden');
-                    videoModal.classList.remove('flex');
-                    videoPlayer.pause();
-                }
-            });
-        }
+    // ===== Khởi tạo =====
+    document.addEventListener('DOMContentLoaded', () => {
+      setupVideoModal();
+      render(defaultConfig); // nạp cấu hình có sẵn 2010.mp4
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            setupVideoModal();
-            
-            if (window.elementSdk) {
-                window.elementSdk.init({
-                    defaultConfig,
-                    render,
-                    mapToCapabilities,
-                    mapToEditPanelValues
-                });
-            }
+      // Tương thích nếu có elementSdk
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig,
+          render,
+          mapToCapabilities: (config) => ({
+            recolorables: [
+              { get:()=>config.primary_color||defaultConfig.primary_color,   set:(v)=>{config.primary_color=v;   render(config);} },
+              { get:()=>config.secondary_color||defaultConfig.secondary_color,set:(v)=>{config.secondary_color=v; render(config);} },
+              { get:()=>config.background_color||defaultConfig.background_color,set:(v)=>{config.background_color=v; render(config);} },
+              { get:()=>config.accent_color||defaultConfig.accent_color,     set:(v)=>{config.accent_color=v;     render(config);} },
+              { get:()=>config.text_color||defaultConfig.text_color,         set:(v)=>{config.text_color=v;       render(config);} },
+            ],
+            borderables: [],
+            fontEditable: undefined,
+            fontSizeable: undefined
+          }),
+          mapToEditPanelValues: (config) => new Map([
+            ["main_title",        config.main_title || defaultConfig.main_title],
+            ["subtitle",          config.subtitle || defaultConfig.subtitle],
+            ["video_button_text", config.video_button_text || defaultConfig.video_button_text],
+            ["video_url",         config.video_url || defaultConfig.video_url],
+            ["greeting_message",  config.greeting_message || defaultConfig.greeting_message],
+          ])
         });
-    </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9918021e46bedb41',t:'MTc2MDk1Nzk5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+      }
+    });
+  </script>
+</body>
 </html>
