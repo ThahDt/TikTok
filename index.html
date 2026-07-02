@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Điểm Thi THPT 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="glass-container main-container">
+        <h1>Tra Cứu Điểm Thi THPT 2026</h1>
+        <p class="subtitle">Xem xếp hạng và quy đổi điểm tương đương 2025</p>
+        
+        <div class="search-box">
+            <input type="text" id="sbdInput" placeholder="Nhập số báo danh (VD: 01000001)" />
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i> Tra cứu</button>
+        </div>
+        
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Đang xử lý dữ liệu...</p>
+        </div>
+        
+        <div id="error" class="hidden alert"></div>
+
+        <div id="results" class="hidden">
+            <div class="student-info">
+                <h2>Số báo danh: <span id="resSBD"></span></h2>
+                <p>Mã tỉnh: <span id="resTinh"></span></p>
+            </div>
+            
+            <div class="results-grid">
+                <div class="result-section">
+                    <h3>Điểm Môn Thi</h3>
+                    <div id="monContainer" class="cards-container"></div>
+                </div>
+                
+                <div class="result-section">
+                    <h3>Điểm Khối Thi</h3>
+                    <div id="khoiContainer" class="cards-container"></div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="divider" />
+        
+        <h2>Quy Đổi Điểm ĐGNL (HSA)</h2>
+        <p class="subtitle">Tìm điểm THPT tương đương thông qua bách phân vị</p>
+        
+        <div class="search-box hsa-box">
+            <select id="hsaType">
+                <option value="khoa_hoc">Phần Khoa Học (Q01-Q10)</option>
+                <option value="tieng_anh">Phần Tiếng Anh (Q21)</option>
+            </select>
+            <input type="number" id="hsaScore" placeholder="Nhập điểm HSA (19-133)" min="19" max="133" />
+            <select id="hsaTarget">
+                <option value="KhoiA">Khối A00</option>
+                <option value="KhoiA1">Khối A01</option>
+                <option value="KhoiB">Khối B00</option>
+                <option value="KhoiC">Khối C00</option>
+                <option value="KhoiD">Khối D01</option>
+                <option value="KhoiA02">Khối A02</option>
+                <option value="KhoiC01">Khối C01</option>
+                <option value="KhoiD07">Khối D07</option>
+                <option value="Toan">Môn Toán</option>
+                <option value="NguVan">Môn Ngữ Văn</option>
+                <option value="VatLy">Môn Vật Lý</option>
+                <option value="HoaHoc">Môn Hóa Học</option>
+                <option value="SinhHoc">Môn Sinh Học</option>
+                <option value="LichSu">Môn Lịch Sử</option>
+                <option value="DiaLy">Môn Địa Lý</option>
+                <option value="NgoaiNgu">Môn Ngoại Ngữ</option>
+            </select>
+            <button id="hsaConvertBtn"><i class="fa-solid fa-calculator"></i> Quy đổi</button>
+        </div>
+        
+        <div id="hsaError" class="hidden alert"></div>
+        <div id="hsaResult" class="hidden"></div>
+        
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
